@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" href="favicon/favicon-16x16.png" type="image/x-icon">
+  <title>Motion CSS Library - Documentation</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    /* Reset */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+        Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      color: #eee;
+      background: #111;
+      overflow-x: hidden;
+      padding: 5rem 2rem 4rem;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      max-width: 100vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: rgba(0, 0, 0, 0.65);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      z-index: 100;
+      backdrop-filter: saturate(180%) blur(10px);
+    }
+    header h1 {
+      font-weight: 900;
+      font-size: 2.4rem;
+      letter-spacing: 0.15em;
+      user-select: none;
+      color: #eee;
+      margin: 0;
+    }
+    nav a {
+      color: #aaa;
+      text-decoration: none;
+      font-weight: 600;
+      margin-left: 2rem;
+      font-size: 1rem;
+      position: relative;
+      user-select: none;
+      padding-bottom: 3px;
+      transition: color 0.3s ease;
+      will-change: color;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 0;
+      background: #eee;
+      transition: width 0.3s ease;
+      will-change: width;
+      border-radius: 2px;
+    }
+    nav a:hover {
+      color: #eee;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      color: #ddd;
+      line-height: 1.6;
+    }
+    h2 {
+      font-size: 2.8rem;
+      font-weight: 900;
+      margin-bottom: 1rem;
+      letter-spacing: 0.03em;
+      color: #eee;
+    }
+    h3 {
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #ccc;
+      border-bottom: 1px solid #333;
+      padding-bottom: 0.3rem;
+    }
+    pre {
+      background: #222;
+      padding: 1rem 1.2rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+      color: #eee;
+    }
+    code {
+      font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    }
+    ul.anim-list {
+      list-style: none;
+      padding-left: 0;
+      columns: 2;
+      column-gap: 3rem;
+      margin-bottom: 2rem;
+    }
+    ul.anim-list li {
+      margin-bottom: 0.4rem;
+      padding-left: 1.2rem;
+      position: relative;
+      color: #bbb;
+      font-weight: 600;
+      cursor: default;
+    }
+    ul.anim-list li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: #777;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      ul.anim-list {
+        columns: 1;
+      }
+      nav a {
+        margin-left: 1rem;
+        font-size: 0.9rem;
+      }
+      header {
+        padding: 1rem 1rem;
+      }
+      h2 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Motion CSS</h1>
+    <nav>
+      <a href="home.html">Home</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Getting Started</h2>
+    <p>
+      Motion CSS is a minimal, modern CSS animation library with 100+ ready-to-use animations.
+      No JavaScript required — just add the CSS classes to your HTML elements and watch them animate.
+    </p>
+
+    <h3>Installation</h3>
+    <p>Add the CSS file link in your <code>&lt;head&gt;</code>:</p>
+    <pre><code>npm i motion-css-library</code></pre>
+
+    <h3>Basic Usage</h3>
+    <p>Simply add the animation class to your element:</p>
+    <pre><code>&lt;div class="fade-in"&gt;Hello, world!&lt;/div&gt;</code></pre>
+    <p>Animations trigger on page load or when the element appears.</p>
+
+    <h2>Animation Classes</h2>
+
+    <h3>🚪 Entry Animations</h3>
+    <ul class="anim-list">
+      <li>fade-in</li>
+      <li>fade-in-down</li>
+      <li>fade-in-up</li>
+      <li>fade-in-left</li>
+      <li>fade-in-right</li>
+      <li>zoom-in</li>
+      <li>zoom-in-down</li>
+      <li>zoom-in-up</li>
+      <li>zoom-in-left</li>
+      <li>zoom-in-right</li>
+      <li>slide-in-down</li>
+      <li>slide-in-up</li>
+      <li>slide-in-left</li>
+      <li>slide-in-right</li>
+      <li>bounce-in</li>
+      <li>bounce-in-down</li>
+      <li>bounce-in-up</li>
+      <li>bounce-in-left</li>
+      <li>bounce-in-right</li>
+      <li>flip-in-x</li>
+    </ul>
+
+    <h3>🚪 Exit Animations</h3>
+    <ul class="anim-list">
+      <li>fade-out</li>
+      <li>fade-out-down</li>
+      <li>fade-out-up</li>
+      <li>fade-out-left</li>
+      <li>fade-out-right</li>
+      <li>zoom-out</li>
+      <li>zoom-out-down</li>
+      <li>zoom-out-up</li>
+      <li>zoom-out-left</li>
+      <li>zoom-out-right</li>
+      <li>slide-out-down</li>
+      <li>slide-out-up</li>
+      <li>slide-out-left</li>
+      <li>slide-out-right</li>
+      <li>bounce-out</li>
+      <li>bounce-out-down</li>
+      <li>bounce-out-up</li>
+      <li>bounce-out-left</li>
+      <li>bounce-out-right</li>
+      <li>flip-out-x</li>
+    </ul>
+
+    <h3>✨ Attention Seekers</h3>
+    <ul class="anim-list">
+      <li>shake</li>
+      <li>wobble</li>
+      <li>jello</li>
+      <li>pulse</li>
+      <li>heartbeat</li>
+      <li>swing</li>
+      <li>tada</li>
+      <li>rubber-band</li>
+      <li>bounce</li>
+      <li>flash</li>
+    </ul>
+
+    <h3>🎡 Rotation</h3>
+    <ul class="anim-list">
+      <li>rotate-in</li>
+      <li>rotate-in-down-left</li>
+      <li>rotate-in-down-right</li>
+      <li>rotate-in-up-left</li>
+      <li>rotate-in-up-right</li>
+      <li>rotate-out</li>
+      <li>rotate-out-down-left</li>
+      <li>rotate-out-down-right</li>
+      <li>rotate-out-up-left</li>
+      <li>rotate-out-up-right</li>
+    </ul>
+
+    <h3>🌊 Morph / Transform</h3>
+    <ul class="anim-list">
+      <li>grow</li>
+      <li>shrink</li>
+      <li>skew-x</li>
+      <li>skew-y</li>
+      <li>stretch-horizontal</li>
+      <li>stretch-vertical</li>
+      <li>tilt-left</li>
+      <li>tilt-right</li>
+      <li>expand-center</li>
+      <li>compress-center</li>
+    </ul>
+
+    <h3>🔄 Looping Animations</h3>
+    <ul class="anim-list">
+      <li>spin</li>
+      <li>spin-slow</li>
+      <li>spin-fast</li>
+      <li>float</li>
+      <li>swing-loop</li>
+      <li>blink</li>
+      <li>wave</li>
+      <li>bounce-loop</li>
+      <li>pulse-loop</li>
+      <li>flicker</li>
+    </ul>
+
+    <h3>🧠 Special Effects</h3>
+    <ul class="anim-list">
+      <li>glitch</li>
+      <li>typewriter</li>
+      <li>flicker-text</li>
+      <li>reveal</li>
+      <li>curtain-open</li>
+      <li>blur-in</li>
+      <li>blur-out</li>
+      <li>zoom-blur</li>
+      <li>slide-reveal</li>
+      <li>underline-expand</li>
+    </ul>
+
+    <h3>📐 Combined / Compound Animations</h3>
+    <ul class="anim-list">
+      <li>fade-slide-up</li>
+      <li>fade-slide-down</li>
+      <li>bounce-zoom-in</li>
+      <li>shake-fade-in</li>
+      <li>zoom-rotate-in</li>
+      <li>pulse-grow</li>
+      <li>float-blur</li>
+      <li>spin-pop-in</li>
+      <li>flicker-glow</li>
+      <li>bounce-entrance-loop</li>
+    </ul>
+  </main>
+</body>
+</html>

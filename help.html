@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" href="favicon/favicon-16x16.png" type="image/x-icon">
+  <title>Motion CSS - Help</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #111;
+      color: #eee;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 900;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 0 auto 3rem;
+    }
+
+    section h2 {
+      font-size: 1.5rem;
+      border-bottom: 1px solid #333;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    section p, li {
+      color: #ccc;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    a {
+      color: #7df9ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Contact form */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    input, textarea, button {
+      background: #222;
+      border: 1px solid #444;
+      color: #eee;
+      padding: 0.75rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-family: inherit;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #7df9ff;
+    }
+
+    button {
+      cursor: pointer;
+      background: #7df9ff;
+      color: #111;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #55e2e7;
+    }
+
+    footer {
+      text-align: center;
+      color: #666;
+      font-size: 0.9rem;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🆘 Motion CSS Help</h1>
+    <p>Your guide to using and troubleshooting Motion CSS</p>
+  </header>
+
+  <section>
+    <h2>📦 How to Install</h2>
+    <p>Install via NPM:</p>
+    <pre><code>npm install motion-css</code></pre>
+    <p>Or add directly in HTML:</p>
+    <pre><code>&lt;link rel="stylesheet" href="motion.css"&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>⚙️ Usage</h2>
+    <p>Use any animation class like:</p>
+    <pre><code>&lt;div class="fade-in"&gt;Hello!&lt;/div&gt;</code></pre>
+    <p>Customize speed:</p>
+    <pre><code>style="animation-duration: 2s;"</code></pre>
+  </section>
+
+  <section>
+    <h2>🐞 Contact for Help</h2>
+    <p>If you're facing any issues, feel free to contact us using this form:</p>
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="d20520ce-9750-4df2-b310-518b6f68ff33" />
+      <textarea name="message" rows="5" placeholder="What's the issue?" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Motion CSS. All rights reserved.
+  </footer>
+
+</body>
+</html>
